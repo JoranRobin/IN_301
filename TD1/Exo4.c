@@ -16,10 +16,22 @@ double somme(int n)
 
 //fonction principale
 int main(){
-	int n;
-	printf("donnez un entier:\n");
-	scanf("%d",&n);
+	int n,i;
+	double k,c;
+	k=0.000001;
+	c=1;
 	
-	printf("La somme numerique est %f \n",somme(n));
-	return(1);
+	while(c>k)
+	{
+		printf("donnez un entier positif:\n");
+		scanf("%d",&n);
+		c=somme(n+1)-somme(n);
+		printf("\nSomme(%d+1)-Somme (%d) vaut :%f \n",n,n,c);
+		printf("La precision vaut:%f \n",k);
+	}
+	
+	printf("La somme de %d vaut :%f",n,somme(n));
+	
 }
+	
+	
